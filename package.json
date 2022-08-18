@@ -1,22 +1,23 @@
 {
-  "name": "parcel-project-template",
-  "version": "2.0.0",
+  "name": "goit-js-hw-08",
+  "version": "1.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "main": "index.js",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/Mariana-Diachun/goit-js-hw-08.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/Mariana-Diachun/goit-js-hw-08/issues"
   },
+  "homepage": "https://github.com/Mariana-Diachun/goit-js-hw-08#readme",
   "dependencies": {
     "modern-normalize": "^1.1.0"
   },
