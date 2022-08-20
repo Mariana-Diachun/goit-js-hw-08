@@ -1,34 +1,14 @@
 import Player from '@vimeo/player';
-console.log(Player);
+import throttle from 'lodash.throttle';
+import { getValue } from './getValueFromLS';
 
-    const iframe = document.querySelector('#vimeo-player');
-const iframePlayer = new Player(iframe);
-    console.log(iframePlayer);
-    
+const iframe = document.querySelector('#vimeo-player');
+const iframePlayer = new Player(iframe);    
 
-iframePlayer.on('play', onTimeUpdate)
-    
-function onTimeUpdate() {
-    seconds: 3.034
+iframePlayer.on('timeupdate', throttle(onTimeUpdate, 1000));
+
+function onTimeUpdate (data) {
+    localStorage.setItem('videoplayer-current-time', data.seconds);
 }
 
-
-
-
-
-//     player.getVideoTitle().then(function(title) {
-//         console.log('title:', title);
-//     });
-//     player.setCurrentTime(30.456).then(function(seconds) {
-//     // seconds = the actual time that the player seeked to
-// }).catch(function(error) {
-//     switch (error.name) {
-//         case 'RangeError':
-//             // the time was less than 0 or greater than the video’s duration
-//             break;
-
-//         default:
-//             // some other error occurred
-//             break;
-//     }
-// });
+iframePlayer.setCurrentTime(getValue('videoplayer-current-time', 0));
