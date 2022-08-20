@@ -2,10 +2,9 @@
   "name": "goit-js-hw-08",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/*.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {
     "type": "git",
@@ -17,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Mariana-Diachun/goit-js-hw-08/issues"
   },
-  "homepage": "https://github.com/Mariana-Diachun/goit-js-hw-08#readme",
+  "homepage": "https://github.com/Mariana-Diachun/goit-js-hw-08",
   "dependencies": {
     "@vimeo/player": "^2.17.1",
     "lodash.throttle": "^4.1.1",
