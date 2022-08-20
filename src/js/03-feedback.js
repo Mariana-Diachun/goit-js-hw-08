@@ -34,7 +34,7 @@ function onFormSubmit(evt) {
 function populateTextarea () {
     const savedStoragedata = localStorage.getItem(STORAGE_KEY)
         if (savedStoragedata) {
-            console.log(JSON.parse(savedStoragedata));
+            return JSON.parse(savedStoragedata);
     }
 }
 
